@@ -49,7 +49,7 @@ const css = () => {
   // Find SASS
   return (
     gulp
-      .src(`${src}/sass/**/*.{sass,scss}`)
+      .src(`${src}/**/*.{sass,scss}`)
       // Init Plumber
       .pipe(plumber())
       // Lint SASS
@@ -77,7 +77,7 @@ const css = () => {
       // Write Source Map
       .pipe(sourcemaps.write(""))
       // Write everything to destination folder
-      .pipe(gulp.dest(`${dist}/css`))
+      .pipe(gulp.dest(`${dist}`))
       // Reload Page
       .pipe(browserSync.stream())
   );
@@ -88,7 +88,7 @@ const html = () => {
   // Find SASS
   return (
     gulp
-      .src(`${src}/*.html`)
+      .src(`${src}/**/*.html`)
       // Init Plumber
       .pipe(plumber())
       // Lint html
@@ -110,36 +110,12 @@ const html = () => {
   );
 };
 
-// Compile .php to minify .php
-const php = () => {
-  // Find php
-  return (
-    gulp
-      .src(`${src}/*.php`)
-      // Init Plumber
-      .pipe(plumber())
-      // Write everything to destination folder
-      .pipe(gulp.dest(`${dist}`))
-  );
-};
-
-// Compile .php to minify .php
-const phpSub = () => {
-  // Find PHP
-  return (
-    gulp
-      .src(`${src}/php/**/*.php`)
-      // Write everything to destination folder
-      .pipe(gulp.dest(`${dist}/php`))
-  );
-};
-
 // Compile .js to minify .js
 const script = () => {
   // Find JavaScript
   return (
     gulp
-      .src(`src/js/**/*.js`)
+      .src(`${src}/**/*.js`)
       // Init Plumber
       .pipe(
         plumber((error) => {
@@ -159,31 +135,9 @@ const script = () => {
       // Write Sourcemap
       .pipe(sourcemaps.write(""))
       // Write everything to destination folder
-      .pipe(gulp.dest(`${dist}/js`))
+      .pipe(gulp.dest(`${dist}`))
       // Update Browser
       .pipe(browserSync.stream())
-  );
-};
-
-// Compile .html to minify .html in html
-const htmlSub = () => {
-  return (
-    gulp
-      .src(`${src}/html/**/*.html`)
-      .pipe(plumber())
-      .pipe(
-        htmlmin({
-          collapseWhitespace: true,
-          removeComments: true,
-          html5: true,
-          removeEmptyAttributes: true,
-          removeTagWhitespace: true,
-          sortAttributes: true,
-          sortClassName: true,
-        })
-      )
-      // Write destination folder
-      .pipe(gulp.dest(`${dist}/html`))
   );
 };
 
@@ -191,9 +145,9 @@ const htmlSub = () => {
 const png = () => {
   return (
     gulp
-      .src(`${src}/img/**/*.png`)
+      .src(`${src}/**/*.png`)
       // Write destination folder
-      .pipe(gulp.dest(`${dist}/img`))
+      .pipe(gulp.dest(`${dist}`))
   );
 };
 
@@ -201,9 +155,9 @@ const png = () => {
 const icons = () => {
   return (
     gulp
-      .src(`${src}/icons/**/*.ico`)
+      .src(`${src}/**/*.ico`)
       // Write destination folder
-      .pipe(gulp.dest(`${dist}/icons`))
+      .pipe(gulp.dest(`${dist}`))
   );
 };
 
@@ -211,34 +165,20 @@ const icons = () => {
 const watch = () =>
   gulp.watch(
     [
-      `${src}/*.html`,
-      `${src}/html/**/*.html`,
-      `${src}/*.php`,
-      `${src}/php/**/*.php`,
-      `${src}/sass/**/*.{sass,scss}`,
-      `${src}/js/**/*.js`,
-      `${src}/img/**/*.png`,
-      `${src}/icons/**/*.ico`,
+      `${src}/**/*.html`,
+      `${src}/**/*.{sass,scss}`,
+      `${src}/**/*.js`,
+      `${src}/**/*.png`,
+      `${src}/**/*.ico`,
     ],
-    gulp.series(css, script, html, htmlSub, php, phpSub, png, icons, reload)
+    gulp.series(css, script, html, png, icons, reload)
   );
 
 // All Tasks for this Project
-const dev = gulp.series(
-  css,
-  script,
-  html,
-  htmlSub,
-  php,
-  phpSub,
-  png,
-  icons,
-  serve,
-  watch
-);
+const dev = gulp.series(css, script, html, png, icons, serve, watch);
 
 // Just Build the Project
-const build = gulp.series(css, script, html, htmlSub, php, phpSub, png, icons);
+const build = gulp.series(css, script, html, png, icons);
 
 // Default function (used when type gulp)
 exports.dev = dev;
