@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+$very-dark-blue: hsl(233, 47%, 7%);
+$dark-desaturated-blue: hsl(244, 38%, 16%);
+$soft-violet: hsl(277, 64%, 61%);
+$white: hsl(0, 0%, 100%);
+$white-transparent-less: hsla(0, 0%, 100%, 0.75);
+$white-transparent-strong: hsla(0, 0%, 100%, 0.6);
+
+body {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+}
+
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  position: relative;
+  top: 20%;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
