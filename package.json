@@ -1,7 +1,7 @@
 {
-  "name": "",
+  "name": "frontendmentor.io",
   "version": "1.0.0",
-  "description": "",
+  "description": "challenges from https://www.frontendmentor.io",
   "main": "index.js",
   "scripts": {
     "dev": "gulp dev",
@@ -12,11 +12,7 @@
     "url": "git+"
   },
   "keywords": [
-    "Portfolio",
-    "HTML",
-    "CSS",
-    "SCSS/Sass",
-    "JavaScript"
+    "frontendmentor"
   ],
   "author": "KeineAhnung",
   "license": "ISC",
