@@ -145,7 +145,7 @@ const script = () => {
 const png = () => {
   return (
     gulp
-      .src(`${src}/**/*.{png,svg}`)
+      .src(`${src}/**/*.{png,svg,jpg}`)
       // Write destination folder
       .pipe(gulp.dest(`${dist}`))
   );
@@ -168,7 +168,7 @@ const watch = () =>
       `${src}/**/*.html`,
       `${src}/**/*.{sass,scss}`,
       `${src}/**/*.js`,
-      `${src}/**/*.png`,
+      `${src}/**/*.{png,svg,jpg}`,
       `${src}/**/*.ico`,
     ],
     gulp.series(css, script, html, png, icons, reload)
