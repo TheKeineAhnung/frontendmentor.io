@@ -145,7 +145,7 @@ const script = () => {
 const png = () => {
   return (
     gulp
-      .src(`${src}/**/*.png`)
+      .src(`${src}/**/*.{png,svg}`)
       // Write destination folder
       .pipe(gulp.dest(`${dist}`))
   );
