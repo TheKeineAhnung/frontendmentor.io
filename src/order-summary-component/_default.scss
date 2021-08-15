@@ -1,0 +1,22 @@
+@import url("https://fonts.google.com/specimen/Red+Hat+Display");
+
+$very-pale-blue: hsl(225, 100%, 98%);
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+$active-color: #726bca;
+
+body {
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 700;
+}
+
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
