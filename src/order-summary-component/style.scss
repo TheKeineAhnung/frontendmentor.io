@@ -80,7 +80,7 @@ body {
             align-items: center;
             color: $bright-blue;
 
-            &:focus {
+            &:hover {
               color: $active-color;
               text-decoration: none;
             }
@@ -102,7 +102,7 @@ body {
           cursor: pointer;
           background-color: transparent;
 
-          &:focus {
+          &:hover {
             font-weight: 900;
           }
 
@@ -111,7 +111,7 @@ body {
             background-color: blue;
             box-shadow: 0 12.5px 12.5px rgba(0, 0, 255, 0.275);
 
-            &:focus {
+            &:hover {
               font-weight: 900;
               background-color: $active-color;
             }
