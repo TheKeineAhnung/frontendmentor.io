@@ -131,7 +131,7 @@ const script = () => {
       // Report of jslint
       .pipe(jshint.reporter("jshint-stylish"))
       // Minify
-      .pipe(uglify())
+      //.pipe(uglify())
       // Write Sourcemap
       .pipe(sourcemaps.write(""))
       // Write everything to destination folder
