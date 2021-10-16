@@ -34,7 +34,7 @@
     "browserify": "^17.0.0",
     "cssnano": "^5.0.2",
     "eslint": "^7.28.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-browserify": "^0.5.1",
     "gulp-clean-css": "^4.3.0",

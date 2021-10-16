@@ -129,7 +129,7 @@ const script = () => {
       // JavaScript Lint
       .pipe(jshint())
       // Report of jslint
-      .pipe(jshint.reporter("jshint-stylish"))
+      //.pipe(jshint.reporter("jshint-stylish"))
       // Minify
       //.pipe(uglify())
       // Write Sourcemap
