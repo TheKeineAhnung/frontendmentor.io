@@ -21,8 +21,16 @@ This repository includes a collection of all my solutions from [frontendmentor.i
     </tr>
     <tr>
         <th>HTML+CSS</th>
-        <th>Profile card componentt</th>
+        <th>Profile card component</th>
         <th><a href="https://github.com/TheKeineAhnung/frontendmentor.io/tree/main/src/profile-card-component">Code</a></th>
+        <th>Newbie</th>
+        <th>false</th>
+        <th>true</th>
+    </tr>
+    <tr>
+        <th>HTML+CSS</th>
+        <th>3-column preview card component</th>
+        <th><a href="https://github.com/TheKeineAhnung/frontendmentor.io/tree/main/src/3-column-preview-card-component">Code</a></th>
         <th>Newbie</th>
         <th>false</th>
         <th>true</th>
