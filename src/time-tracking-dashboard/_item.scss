@@ -1,0 +1,61 @@
+@import "default";
+
+.item {
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) -15px;
+    border-radius: 25px;
+
+    .content {
+        margin-top: 50px;
+        height: 85%;
+        z-index: 2;
+        background-color: $dark-blue;
+        border-radius: 25px;
+
+        &:hover {
+            background-color: $blue;
+            transition-duration: 250ms;
+        }
+
+        &:not(:hover) {
+            transition-duration: 250ms;
+        }
+
+        .title {
+            font-size: 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            padding: 25px;
+
+            .menu {
+                cursor: pointer;
+            }
+        }
+
+        @media only screen and (max-width: 920px) {
+            .under-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .time {
+            color: white;
+            font-size: 2rem;
+            padding: 20px;
+
+            .time {
+                padding: inherit 0;
+            }
+        }
+
+        .last-week {
+            font-size: 0.75rem;
+            color: $pale-blue;
+            padding: 20px;
+            padding-bottom: 0;
+        }
+    }
+}
