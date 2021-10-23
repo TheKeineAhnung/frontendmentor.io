@@ -1,0 +1,157 @@
+@import "default";
+
+main {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @media only screen and (max-width: 1200px) {
+        width: 90%;
+        height: auto;
+    }
+
+    section {
+        &.top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media only screen and (max-width: 1200px) {
+                flex-direction: column;
+                height: auto;
+                position: relative;
+                top: 25px;
+            }
+
+            div {
+                &.left {
+                    width: 60%;
+
+                    @media only screen and (max-width: 1200px) {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        text-align: center;
+                    }
+
+                    @media only screen and (max-width: 600px) {
+                        width: 90%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                    }
+
+                    div {
+                        width: 75%;
+
+                        &.heading {
+                            color: $very-dark-magenta;
+                            font-weight: 700;
+                            font-size: 2rem;
+                        }
+
+                        &.description {
+                            color: $dark-grayish-magenta;
+                        }
+                    }
+                }
+
+                &.right {
+                    width: 40%;
+
+                    @media only screen and (max-width: 1200px) {
+                        width: 60%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                    }
+
+                    @media only screen and (max-width: 600px) {
+                        width: 90%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                    }
+
+                    div {
+                        display: flex;
+                        align-items: center;
+
+                        &.top {
+                            justify-content: left;
+                        }
+
+                        &.center {
+                            justify-content: center;
+
+                            @media only screen and (max-width: 1200px) {
+                                justify-content: left;
+                            }
+                        }
+
+                        &.bottom {
+                            justify-content: right;
+
+                            @media only screen and (max-width: 1200px) {
+                                justify-content: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.bottom {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60%;
+
+            @media only screen and (max-width: 1200px) {
+                flex-direction: column;
+                justify-content: flex-end;
+                position: relative;
+                top: 25px;
+            }
+
+            div {
+                &.card {
+                    width: 30%;
+                    height: 50%;
+                    display: flex;
+                    justify-content: center;
+
+                    @media only screen and (max-width: 1200px) {
+                        width: 60%;
+                        margin: 6px 0;
+                    }
+
+                    @media only screen and (max-width: 1200px) {
+                        width: 90%;
+                        margin: 6px 0;
+                    }
+
+                    &.left {
+                        align-items: flex-end;
+                    }
+
+                    &.center {
+                        align-items: center;
+                    }
+
+                    &.right {
+                        align-items: flex-start;
+                    }
+                }
+            }
+        }
+    }
+}

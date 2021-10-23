@@ -36,6 +36,14 @@ This repository includes a collection of all my solutions from [frontendmentor.i
         <th>true</th>
     </tr>
     <tr>
+        <th>HTML+SCSS</th>
+        <th>Social proof section</th>
+        <th><a href="https://github.com/TheKeineAhnung/frontendmentor.io/tree/main/src/social-proof-section">Code</a></th>
+        <th>Newbie</th>
+        <th>false</th>
+        <th>true</th>
+    </tr>
+    <tr>
         <th>HTML+SCSS+JS</th>
         <th>Time tracking dashboard</th>
         <th><a href="https://github.com/TheKeineAhnung/frontendmentor.io/tree/main/src/time-tracking-dashboard">Code</a></th>
